@@ -1,8 +1,7 @@
 import {Entity, PrimaryGeneratedColumn, Column, PrimaryColumn, BaseEntity} from "typeorm";
 
 @Entity()
-export class members extends BaseEntity{
-
+export class Member extends BaseEntity{
     @PrimaryColumn({unique: true})
     id: number;
 
@@ -20,10 +19,11 @@ export class members extends BaseEntity{
 
     constructor(){
         super();
-        this.name="";
-        this.committee="";
-        this.email="";
-        this.id=0;
-        this.mobile=0;
+        this.id = 0;
+        this.name = "";
+        this.email = "";
+        this.mobile = 0;
+        this.committee = "";
+
     }
 }
